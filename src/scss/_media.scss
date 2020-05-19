@@ -1,0 +1,217 @@
+@media (max-width: 1200px) {
+  .header__content {
+    padding: 50px 0 35px;
+  }
+
+  button.header__button,
+  .press button.download__btn {
+    margin-bottom: 90px;
+  }
+  .examples .works__item {
+    min-height: 232px;
+    height: none;
+    width: none;
+  }
+  .profiles .container .social .profiles__item {
+    display: flex;
+    flex-basis: auto;
+    padding-bottom: 60px;
+    .profiles__photo {
+      margin-right: 30px;
+      margin-left: 20px;
+    }
+  }
+  .profiles .container .social .profiles__item .profiles__name {
+    position: relative;
+    h3 {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      // transform: translateY(-50%);
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .profiles .container .social .profiles__item .profiles__profession {
+    position: relative;
+    h4 {
+      position: absolute;
+      left: 20px;
+      top: calc(50% - 40px);
+    }
+  }
+  .profiles .container .social .profiles__item .profiles__description p {
+    position: relative;
+    padding: 0 35px 0 190px;
+  }
+  .profiles .container .social .profiles__item .profiles__socialNetworks {
+    position: relative;
+    left: 186px;
+    margin: 0;
+  }
+  .profiles .container .social .profiles__item .profiles__description {
+    margin: 0;
+  }
+}
+
+@media (max-width: 970px) {
+  .header__nav .button-box {
+    display: flex;
+  }
+  .header__content h1 {
+    font-size: 46px;
+  }
+  .header__content p {
+    font-size: 17px;
+  }
+  .clients .clients__text {
+    height: 400px;
+  }
+  .profiles__img {
+    max-width: 200px;
+  }
+  .clients .clients__text {
+    padding: 15px 40px;
+  }
+
+  .clients .clients__text p.clients__quote {
+    font-size: 27px;
+  }
+  .profiles .container .social {
+    padding-bottom: 40px;
+  }
+  .advantages__item .advantages__content {
+    max-width: 190px;
+  }
+  .profiles .container .social .profiles__item {
+    display: flex;
+    flex-basis: auto;
+    padding-bottom: 30px;
+  }
+  .profiles .container .social .profiles__item .profiles__description p {
+    position: relative;
+    padding: 0 35px 0 130px;
+  }
+  .profiles .container .social .profiles__item .profiles__socialNetworks {
+    left: 126px;
+  }
+  .examples .works__item {
+    min-height: 185px;
+  }
+  .header__nav .header__menu {
+    display: none;
+  }
+  .header__nav .header__menu.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px 0 40px;
+    background-color: #272c4a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 9;
+    & > a.header__menuItem {
+      width: 45%;
+      margin: 10px 0;
+      padding: 10px 0;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .clients {
+    display: block;
+    padding: 0;
+    margin: 0;
+    height: auto;
+  }
+
+  .clients img.clients__photo {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .clients .clients__text {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .clients .clients__text p.clients__quote {
+    padding: 0;
+    margin: 0;
+    height: auto;
+  }
+
+  .press h3.download__title {
+    font-size: 23px;
+  }
+
+  .press button.download__btn {
+    width: 240px;
+  }
+  .press {
+    padding: 40px 0;
+  }
+  .clients .clients__text p.clients__quote {
+    font-size: 23px;
+  }
+  .profiles__img {
+    max-width: 140px;
+  }
+  .examples .works__item {
+    min-width: 287px;
+  }
+  .advantages__item {
+    flex-basis: 50%;
+    margin-bottom: 5px;
+  }
+
+  .advantages__item img {
+    max-width: 50px;
+    margin-bottom: 0;
+  }
+  .advantages__item .advantages__img {
+    margin-bottom: 0;
+  }
+  .advantages__item .advantages__content {
+    max-width: 250px;
+    font-size: 13px;
+  }
+  .advantages__item h3 {
+    font-size: 13x;
+  }
+  .profiles__description {
+    display: block;
+    position: static;
+  }
+  .profiles .container .social .profiles__item {
+    display: block;
+    position: relative;
+  }
+  .profiles .container .social .profiles__item .profiles__description p {
+    padding: 0;
+    margin: 20px 10px;
+    text-align: justify;
+    position: relative;
+  }
+  .profiles .container .social .profiles__item .profiles__name {
+    top: -130px;
+    position: relative;
+    left: 170px;
+  }
+  .profiles .container .social .profiles__item .profiles__profession {
+    position: relative;
+    top: -45px;
+    left: 170px;
+  }
+  .profiles .container .social .profiles__item .profiles__socialNetworks {
+    position: absolute;
+    left: 189px;
+    bottom: 147px;
+  }
+}
+@media (max-width: 575px) {
+}
