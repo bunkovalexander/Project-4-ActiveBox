@@ -1,4 +1,4 @@
-$(function () {
+$(document).ready(function () {
   let header = $("nav");
   let advantages = $(".header");
   let advantagesH = advantages.outerHeight();
