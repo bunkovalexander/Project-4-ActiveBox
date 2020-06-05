@@ -8,7 +8,7 @@
     margin-bottom: 90px;
   }
   .examples .works__item {
-    min-height: 232px;
+    // min-height: 232px;
     height: none;
     width: none;
   }
@@ -22,9 +22,7 @@
     }
   }
   .profiles .container .social .profiles__item .profiles__name {
-    position: relative;
     h3 {
-      position: absolute;
       top: 0;
       left: 20px;
       // transform: translateY(-50%);
@@ -33,20 +31,19 @@
     }
   }
   .profiles .container .social .profiles__item .profiles__profession {
-    position: relative;
     h4 {
-      position: absolute;
       left: 20px;
       top: calc(50% - 40px);
     }
   }
   .profiles .container .social .profiles__item .profiles__description p {
-    position: relative;
-    padding: 0 35px 0 190px;
+    // position: relative;
+    padding-left: 10px;
   }
   .profiles .container .social .profiles__item .profiles__socialNetworks {
     position: relative;
-    left: 186px;
+    left: 0px;
+    top: 0;
     margin: 0;
   }
   .profiles .container .social .profiles__item .profiles__description {
@@ -89,14 +86,18 @@
     padding-bottom: 30px;
   }
   .profiles .container .social .profiles__item .profiles__description p {
-    position: relative;
-    padding: 0 35px 0 130px;
+    // position: relative;
+    // padding: 0 35px 0 30px;
   }
   .profiles .container .social .profiles__item .profiles__socialNetworks {
-    left: 126px;
+    top: -12px;
+    left: 15px;
   }
   .examples .works__item {
-    min-height: 185px;
+    // min-height: 185px;
+  }
+  .examples .works__item {
+    flex-basis: 50%;
   }
   .header__nav .header__menu {
     display: none;
@@ -120,11 +121,18 @@
   }
 }
 @media (max-width: 767px) {
+  .features {
+    padding: 50px 0 50px;
+  }
   .clients {
     display: block;
     padding: 0;
     margin: 0;
     height: auto;
+  }
+  .examples .works__item {
+    flex-basis: 33.333%;
+    height: 23vw;
   }
 
   .clients img.clients__photo {
@@ -162,7 +170,7 @@
     max-width: 140px;
   }
   .examples .works__item {
-    min-width: 287px;
+    // min-width: 287px;
   }
   .advantages__item {
     flex-basis: 50%;
@@ -184,34 +192,134 @@
     font-size: 13x;
   }
   .profiles__description {
-    display: block;
-    position: static;
+    // display: block;
+    // position: static;
   }
   .profiles .container .social .profiles__item {
-    display: block;
-    position: relative;
+    // display: flex;
+    // flex-direction: column;
+    // width: 100%;
+    // flex-basis: 100%;
+
+    // position: relative;
   }
   .profiles .container .social .profiles__item .profiles__description p {
-    padding: 0;
+    // padding: 0;
     margin: 20px 10px;
     text-align: justify;
-    position: relative;
+    // position: relative;
+    // position: static;
+    display: block;
   }
   .profiles .container .social .profiles__item .profiles__name {
     top: -130px;
-    position: relative;
+    // position: relative;
     left: 170px;
+    display: block;
+    position: static;
   }
   .profiles .container .social .profiles__item .profiles__profession {
-    position: relative;
+    // position: relative;
     top: -45px;
     left: 170px;
+    display: block;
+    position: static;
   }
   .profiles .container .social .profiles__item .profiles__socialNetworks {
-    position: absolute;
-    left: 189px;
-    bottom: 147px;
+    // position: absolute;
+  }
+  .press button.download__btn {
+    margin-bottom: 20px;
+  }
+  footer .container .footer__contacts {
+    padding: 50px 0 50px;
+  }
+  footer .container .footer__contacts .footer__about p.footer__adress,
+  footer
+    .container
+    .footer__contacts
+    .location__box
+    .footer__location
+    p.footer__adress {
+    font-size: 13px;
   }
 }
 @media (max-width: 575px) {
+  .examples .works__item {
+    flex-basis: 50%;
+    height: 36vw;
+  }
+  .advantages__item {
+    flex-basis: 100%;
+  }
+  .advantages__item .advantages__content {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  .advantages__item img {
+    max-width: 35px;
+  }
+  .advantages__item h3 {
+    font-size: 13x;
+    margin: 10px 0 0 0;
+  }
+  .profiles .container .social .profiles__item {
+    display: block;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .profiles .container .social .profiles__item .profiles__photo,
+  .profiles__people {
+    margin: 0 auto;
+  }
+  .profiles .container .social .profiles__item {
+  }
+  .profiles .container .social .profiles__item .profiles__socialNetworks {
+    position: static;
+    margin: 0 auto;
+  }
+  .header__content h1 {
+    font-size: 36px;
+  }
+  .profiles
+    .container
+    .social
+    .profiles__item
+    .profiles__people
+    .profiles__name
+    h3 {
+    margin-top: 10px;
+  }
+  .clients .clients__text p.clients__quote {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .clients .clients__text p.clients__signature {
+    max-width: 500px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 11px;
+  }
+  .clients .clients__text {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 31px 14px;
+    text-align: justify;
+    max-width: 100%;
+  }
+  .clients .clients__text p.clients__quote {
+    max-width: 900px;
+  }
+  footer .container .footer__contacts {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  footer .container .footer__contacts .location__box {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  footer .container .footer__contacts .footer__networcs {
+    padding-bottom: 25px;
+  }
 }
