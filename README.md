@@ -1,2 +1,2 @@
 # ActiveBox
-new project ActiveBox
+new project ActiveBox [Смотреть] (https://bunkovalexander.github.io/ActiveBox/docs/)
