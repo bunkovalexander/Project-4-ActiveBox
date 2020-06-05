@@ -13,7 +13,7 @@ let gulp = require("gulp"),
 autoprefixer = require("gulp-autoprefixer");
 
 gulp.task("clean", async function () {
-  del.sync("docs");
+  del.sync("build");
 });
 
 gulp.task("pug", function () {
@@ -36,7 +36,7 @@ gulp.task("pug", function () {
       })
     )
 
-    .pipe(gulp.dest("./docs/"));
+    .pipe(gulp.dest("./build/"));
 });
 
 gulp.task("scss", function (callback) {
@@ -61,7 +61,7 @@ gulp.task("scss", function (callback) {
       })
     )
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest("./docs/css/"))
+    .pipe(gulp.dest("./build/css/"))
     .pipe(browserSync.reload({ stream: true }));
 
   callback();
@@ -109,7 +109,7 @@ gulp.task("js", function () {
 gulp.task("browser-sync", function () {
   browserSync.init({
     server: {
-      baseDir: "./docs/",
+      baseDir: "./build/",
     },
   });
 });
@@ -127,25 +127,25 @@ gulp.task("browser-sync", function () {
 // });
 
 gulp.task("copy:img", function (callback) {
-  return gulp.src("./src/img/**/*.*").pipe(gulp.dest("./docs/img/"));
+  return gulp.src("./src/img/**/*.*").pipe(gulp.dest("./build/img/"));
   callback();
 });
 
 gulp.task("copy:js", function (callback) {
-  return gulp.src("./src/js/**/*.*").pipe(gulp.dest("./docs/js/"));
+  return gulp.src("./src/js/**/*.*").pipe(gulp.dest("./build/js/"));
   callback();
 });
 
 gulp.task("watch", function () {
   gulp.watch("src/scss/**/*.scss", gulp.parallel("scss"));
-  gulp.watch("docs/*.html", gulp.parallel("html"));
+  gulp.watch("build/*.html", gulp.parallel("html"));
   gulp.watch("src/js/*.js", gulp.parallel("script"));
   gulp.watch("src/pug/**/*.pug", gulp.parallel("pug"));
   gulp.watch("src/img/**/*.*", gulp.parallel("copy:img"));
   gulp.watch("src/js/**/*.*", gulp.parallel("copy:js"));
 });
 
-gulp.task("docs", gulp.series("clean"));
+gulp.task("build", gulp.series("clean"));
 
 // gulp.task(
 //   "default",
@@ -155,7 +155,7 @@ gulp.task("docs", gulp.series("clean"));
 gulp.task(
   "default",
   gulp.series(
-    "docs",
+    "build",
     "css",
     "scss",
     "js",
