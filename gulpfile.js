@@ -13,7 +13,7 @@ let gulp = require("gulp"),
 autoprefixer = require("gulp-autoprefixer");
 
 gulp.task("clean", async function () {
-  del.sync("build");
+  del.sync("docs");
 });
 
 gulp.task("pug", function () {
@@ -36,7 +36,7 @@ gulp.task("pug", function () {
       })
     )
 
-    .pipe(gulp.dest("./build/"));
+    .pipe(gulp.dest("./docs/"));
 });
 
 gulp.task("scss", function (callback) {
@@ -61,7 +61,7 @@ gulp.task("scss", function (callback) {
       })
     )
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest("./build/css/"))
+    .pipe(gulp.dest("./docs/css/"))
     .pipe(browserSync.reload({ stream: true }));
 
   callback();
@@ -109,7 +109,7 @@ gulp.task("js", function () {
 gulp.task("browser-sync", function () {
   browserSync.init({
     server: {
-      baseDir: "./build/",
+      baseDir: "./docs/",
     },
   });
 });
@@ -127,25 +127,25 @@ gulp.task("browser-sync", function () {
 // });
 
 gulp.task("copy:img", function (callback) {
-  return gulp.src("./src/img/**/*.*").pipe(gulp.dest("./build/img/"));
+  return gulp.src("./src/img/**/*.*").pipe(gulp.dest("./docs/img/"));
   callback();
 });
 
 gulp.task("copy:js", function (callback) {
-  return gulp.src("./src/js/**/*.*").pipe(gulp.dest("./build/js/"));
+  return gulp.src("./src/js/**/*.*").pipe(gulp.dest("./docs/js/"));
   callback();
 });
 
 gulp.task("watch", function () {
   gulp.watch("src/scss/**/*.scss", gulp.parallel("scss"));
-  gulp.watch("build/*.html", gulp.parallel("html"));
+  gulp.watch("docs/*.html", gulp.parallel("html"));
   gulp.watch("src/js/*.js", gulp.parallel("script"));
   gulp.watch("src/pug/**/*.pug", gulp.parallel("pug"));
   gulp.watch("src/img/**/*.*", gulp.parallel("copy:img"));
   gulp.watch("src/js/**/*.*", gulp.parallel("copy:js"));
 });
 
-gulp.task("build", gulp.series("clean"));
+gulp.task("docs", gulp.series("clean"));
 
 // gulp.task(
 //   "default",
@@ -155,7 +155,7 @@ gulp.task("build", gulp.series("clean"));
 gulp.task(
   "default",
   gulp.series(
-    "build",
+    "docs",
     "css",
     "scss",
     "js",
