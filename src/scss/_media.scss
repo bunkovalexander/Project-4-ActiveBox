@@ -70,6 +70,31 @@
   .clients .clients__text {
     padding: 15px 40px;
   }
+  .rewiews .wrapper__slider .clients .clients__text {
+    padding: 15px 25px;
+  }
+  .rewiews .wrapper__slider .clients .clients__text p.clients__quote {
+    font-size: 26px;
+  }
+  .rewiews .wrapper__slider .clients img.clients__photo,
+  .rewiews .wrapper__slider .clients .clients__text {
+    width: 100vw;
+    flex-basis: 100vw;
+    display: block;
+    height: auto;
+  }
+  .slick-arrow {
+    width: 30px;
+    height: 30px;
+    border-top: 5px solid #eee;
+    border-right: 5px solid #eee;
+  }
+  .slick-arrow.slick-next {
+    right: 5%;
+  }
+  .rewiews .wrapper__slider .clients {
+    display: block;
+  }
 
   .clients .clients__text p.clients__quote {
     font-size: 27px;

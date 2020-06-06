@@ -23,6 +23,7 @@
     <title>ActiveBox</title>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cardo:400,400i|Open+Sans:400,700|Raleway:300,400,400i,600,700,700i&amp;display=swap"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   </head>
   <body>
     <header class="header">
@@ -30,8 +31,8 @@
         <div class="header__section">
           <nav class="header__nav">
             <div class="header__logo"><img src="./img/logo.png" alt="logo"/></div>
-            <div class="header__menu"><a class="header__menuItem">Features</a><a class="header__menuItem">works</a><a class="header__menuItem"> 
-                <nobr>our team</nobr></a><a class="header__menuItem">testimonials</a><a class="header__menuItem">downloads</a></div>
+            <div class="header__menu"><a class="header__menuItem" data-scroll="#feautures">Features</a><a class="header__menuItem" data-scroll="#works">works</a><a class="header__menuItem" data-scroll="#team"> 
+                <nobr>our team</nobr></a><a class="header__menuItem" data-scroll="#testimonials">testimonials</a><a class="header__menuItem" data-scroll="#downloads">downloads</a></div>
             <div class="button-box">
               <button class="header__burger"></button>
             </div>
@@ -44,7 +45,7 @@
         </div>
       </div>
     </header>
-    <section class="advantages">
+    <section class="advantages" id="feautures">
       <div class="container">
         <div class="features">
           <div class="advantages__item">
@@ -104,7 +105,7 @@
         </div>
       </div>
     </section>
-    <section class="works">
+    <section class="works" id="works">
       <div class="examples">
         <div class="works__item">
           <div class="works__bg">
@@ -156,7 +157,7 @@
         </div>
       </div>
     </section>
-    <section class="profiles">
+    <section class="profiles" id="team">
       <div class="container">
         <div class="social">
           <div class="profiles__item">   
@@ -250,13 +251,25 @@
         </div>
       </div>
     </section>
-    <div class="clients"><img class="clients__photo" src="./img/client.png" alt=""/>
-      <div class="clients__text">
-        <p class="clients__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
-        <p class="clients__signature">Susan Sims, Interaction Designer at XYZ</p>
+    <div class="rewiews">
+      <div class="wrapper__slider">
+        <div class="clients" id="testimonials"><img class="clients__photo" src="./img/client.png" alt=""/>
+          <div class="clients__text">
+            <p class="clients__quote">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
+            <p class="clients__signature">Susan Sims, Interaction Designer at XYZ</p>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper__slider">
+        <div class="clients" id="testimonials"><img class="clients__photo" src="./img/client2.jpg" alt=""/>
+          <div class="clients__text">
+            <p class="clients__quote">“Quis sit quo nostrum nisi natus blanditiis, accusantium incidunt commodi, est quibusdam mollitia expedita explicabo....”</p>
+            <p class="clients__signature">Susan Sims, Interaction Designer at XYZ</p>
+          </div>
+        </div>
       </div>
     </div>
-    <section class="download">
+    <section class="download" id="downloads">
       <div class="container">
         <div class="press">
           <h3 class="download__title">Are You Ready to Start? Download Now For Free!</h3>
@@ -301,3 +314,4 @@
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="./js/main.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

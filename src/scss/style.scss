@@ -47,7 +47,7 @@ $purple: #53354a;
 // -----   HEADER   -----
 .fixed {
   position: fixed;
-  background: #2b304d;
+  background-color: #2b304d;
   z-index: 999;
   width: 100%;
   margin: 0;
@@ -435,45 +435,115 @@ button.header__button:hover {
 }
 
 // -----   clients   -----
+.rewiews {
+  outline: none;
 
-.clients {
-  margin: 0 auto;
+  .wrapper__slider {
+    .clients {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      max-width: 1900px;
+      overflow: hidden;
+      outline: none;
+
+      img.clients__photo {
+        flex-basis: 50%;
+        width: 50%;
+        object-fit: cover;
+        max-width: 950px;
+        max-height: 500px;
+      }
+
+      .clients img.clients__photo {
+      }
+
+      .clients__text {
+        height: 500px;
+        // padding-left: 80px;
+        background-color: $purple;
+        flex-basis: 50%;
+        // padding-top: 70px;
+        padding: 70px 30px 0 70px;
+        outline: none;
+
+        p.clients__quote {
+          // max-width: 510px;
+          font-family: "Cardo", serif;
+          font-style: italic;
+          font-size: 36px;
+          margin-bottom: 27px;
+          line-height: 42px;
+          color: #fff;
+        }
+        p.clients__signature {
+          max-width: 500px;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: 12px;
+          line-height: 21px;
+          text-transform: uppercase;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// ----SLIDER--------
+
+.slick-initialized .slick-slide {
   display: flex;
-  justify-content: center;
-  max-width: 1900px;
+}
 
-  img.clients__photo {
-    flex-basis: 50%;
-    width: 50%;
-    object-fit: cover;
-  }
-
-  .clients__text {
-    height: 500px;
-    // padding-left: 80px;
-    background-color: $purple;
-    flex-basis: 50%;
-    // padding-top: 70px;
-    padding: 70px 30px 0 70px;
-
-    p.clients__quote {
-      // max-width: 510px;
-      font-family: "Cardo", serif;
-      font-style: italic;
-      font-size: 36px;
-      margin-bottom: 27px;
-      line-height: 42px;
-      color: #fff;
-    }
-    p.clients__signature {
-      max-width: 500px;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 12px;
-      line-height: 21px;
-      text-transform: uppercase;
-      color: #fff;
-    }
-  }
+.slick-initialized .slick-slide {
+  display: flex;
+  outline: none;
+}
+.slick-initialized .slick-slide .rewiews .wrapper__slider {
+  height: 500px;
+  overflow: hidden;
+  outline: none;
+}
+.slick-slider {
+  position: relative;
+  outline: none;
+}
+/* Стрелка */
+.slick-arrow {
+  width: 60px;
+  height: 60px;
+  border-top: 10px solid #eee;
+  border-right: 10px solid #eee;
+  border-left: none;
+  border-bottom: none;
+  margin-right: 60px;
+  background-color: transparent;
+  font-size: 0;
+  overflow: hidden;
+  outline: none;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 6;
+  transform: translateY(100px);
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+  transform: rotate(-135deg);
+  top: 45%;
+  left: 2%;
+  position: absolute;
+  outline: none;
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+  transform: rotate(45deg);
+  top: 45%;
+  right: 2%;
+  position: absolute;
+  outline: none;
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
 }
 
 // -----   download   -----
