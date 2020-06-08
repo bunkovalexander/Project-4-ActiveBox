@@ -25,7 +25,7 @@ $(document).ready(function () {
     event.preventDefault();
     let elementId = $(this).data("scroll");
     // console.log(elementId);
-    let elementOffset = $(elementId).offset().top;
+    let elementOffset = $(elementId).offset().top - 20;
     // console.log(elementOffset);
     $(".header__burger").removeClass("active");
     $(".header__menu").removeClass("active");
@@ -33,7 +33,7 @@ $(document).ready(function () {
       {
         scrollTop: elementOffset,
       },
-      300
+      800
     );
   });
 
