@@ -25,7 +25,7 @@ $(document).ready(function () {
     event.preventDefault();
     let elementId = $(this).data("scroll");
     // console.log(elementId);
-    let elementOffset = $(elementId).offset().top - 20;
+    let elementOffset = $(elementId).offset().top - 100;
     // console.log(elementOffset);
     $(".header__burger").removeClass("active");
     $(".header__menu").removeClass("active");
@@ -33,7 +33,7 @@ $(document).ready(function () {
       {
         scrollTop: elementOffset,
       },
-      800
+      400
     );
   });
 
@@ -78,7 +78,7 @@ $(window).on("scroll load resize", function () {
   var cur_pos = $(this).scrollTop(); // получили высоту от верха до верха окна
 
   sections.each(function () {
-    var top = $(this).offset().top - nav_height,
+    var top = $(this).offset().top - nav_height - 200,
       bottom = top + $(this).outerHeight();
 
     if (cur_pos >= top && cur_pos <= bottom) {
